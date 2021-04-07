@@ -1,0 +1,10 @@
+# Carpetas
+node_modules/
+.idea/
+uploads/cv/*
+uploads/empresas/*
+uploads/usuarios/*
+
+
+# Archivos
+.env
