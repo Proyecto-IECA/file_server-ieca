@@ -5,7 +5,7 @@ const express = require('express');
 //Configuración del CORS
 const cors = require('cors');
 // Importar la configuración de la BD
-// const { dbConnection } = require('./database/config');
+
 
 
 
@@ -19,7 +19,9 @@ app.use(cors());
 app.use(express.json());
 
 // Coneción a la base de datos
-// dbConnection();
+
+
+
 
 // Directorio publico
 app.use(express.static('public'));

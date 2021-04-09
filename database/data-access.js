@@ -1,5 +1,6 @@
 //Se requiere de la dependencia mysql y la almacenamos en una constante
 const mysql = require("mysql");
+
 //Se requiere de la cadena de conexion del archivo .config.js
 const conString = require("./config");
 
@@ -31,5 +32,5 @@ const queryParams = (stpName, mysqlParams) => {
 //Se exportan las dos funciones
 module.exports = {
     query,
-    queryParams,
+    queryParams
 };

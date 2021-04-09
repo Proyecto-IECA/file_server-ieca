@@ -6,13 +6,10 @@ const { Router } = require('express');
 const expressFileUpload = require('express-fileupload');
 
 // Validators
-// const { validJWT } = require("../middlewares/valid-jwt");
+const { validJWT } = require("../middlewares/valid-jwt");
 
 // Import Controllers
-// const {  } = require('../controllers/usuarios');
-// const {  } = require('../controllers/empresas');
-// const {  } = require('../controllers/curriculums');
-const { uploadFile, getFile } = require('../controllers/uploads');
+const { putImg, getImg } = require('../controllers/uploads');
 
 
 const router = Router();
@@ -25,12 +22,9 @@ router.use(expressFileUpload({
 
 
 // Controllers
-router.put('/:tipo/:id', uploadFile);
+router.put('/:tipo/:id', validJWT, putImg);
 
-router.get('/:tipo/:img', getFile);
-/*router.put('/:tipo/:id', validJWT, uploadFile);
-
-router.get('/:tipo/:img', validJWT, getFile);*/
+router.get('/:tipo/:img', validJWT, getImg);
 
 
 

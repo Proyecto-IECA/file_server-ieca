@@ -1,9 +1,9 @@
 # Carpetas
 node_modules/
 .idea/
-uploads/cv/*
+uploads/cvs/*
 uploads/empresas/*
-uploads/usuarios/*
+uploads/postulantes/*
 
 
 # Archivos
