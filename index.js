@@ -30,6 +30,7 @@ app.use(express.static('public'));
 
 // Ruta
 app.use('/api/upload', require('./routes/uploads'));
+// app.use('/api/upload/cv', require('./routes/uploadPDF'));
 
 
 

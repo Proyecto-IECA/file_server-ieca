@@ -7,7 +7,7 @@ const { queryParams } = require('../database/data-access');
 
 
 
-const uploadImg = async(tipo, id, path, nameFile) => {
+const uploadImg = async (tipo, id, path, nameFile) => {
 
     let data;
     let params;
@@ -75,7 +75,7 @@ function saveFile(path, imgOld) {
 }
 
 
-
+// Export methods
 module.exports = {
     uploadImg
 }

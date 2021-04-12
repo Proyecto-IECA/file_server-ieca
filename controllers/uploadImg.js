@@ -17,7 +17,7 @@ const putImg = async (req, res = response) => {
 
 
     // Validar el tipo
-    const tipoValid = ['postulantes', 'empresas', 'cvs'];
+    const tipoValid = ['postulantes', 'empresas'];
     if (!tipoValid.includes(tipo)) {
         return res.json({
             status: false,
@@ -95,37 +95,13 @@ const putImg = async (req, res = response) => {
 
 };
 
-const  getImg = async (req, res = response) => {
-
-    // Catch 'tipo' y 'id' de params (URL)
-    const tipo = req.params.tipo;
-    const img = req.params.img;
-
-
-    // Get path de la imagen
-    let pathImg = path.join(__dirname, `../uploads/${tipo}/${img}`);
-
-
-    // Validar que el nombre coincida
-    if (fs.existsSync(pathImg)) {
-        // Mandar archivo
-        res.sendFile(pathImg);
-    } else {
-        // Send Img default
-        pathImg = path.join(__dirname, '../assets/img/no-image.png');
-        res.sendFile(pathImg);
-    }
-
-};
-
 
 
 
 
 // Export methods
 module.exports = {
-    putImg,
-    getImg
+    putImg
 };
 
 
