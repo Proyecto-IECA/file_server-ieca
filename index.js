@@ -35,8 +35,13 @@ app.use('/api/upload', require('./routes/uploads'));
 
 
 // Controlar el puerto donde se corre el servidor
-app.listen(process.env.port || 3000, () => {
-    console.log('Server ON. Port: ' + process.env.port);
+app.listen(process.env.port || 3000, err => {
+    if (err) {
+        console.error('ERROR in your server check on:' + err);
+        return;
+    }
+    console.log('Your server is running on localhost:' + process.env.port
+        + '\n<---------------------------------------->');
 });
 
 
