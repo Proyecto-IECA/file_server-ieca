@@ -21,7 +21,7 @@ const uploadFile = async (id, path, nameFile) => {
     await saveFile(path, data[0][0].imagen);
 
     // Actualizar BD
-    const params = [data, imagen = nameFile];
+    const params = [id_vacante = id, imagen = nameFile];
     await queryParams("stp_update_foto_vacante(?, ?)", params);
 
     //! Cerrar la conexión a la BD
@@ -37,10 +37,7 @@ function saveFile(path, fileOld) {
     const pathOld = `${ path }/${ fileOld }`;
 
     // Verificar si hay una imagen almacenada
-    if (fs.existsSync(pathOld)) {
-        // Borrar la imagen anterior
-        fs.unlinkSync(pathOld);
-    }
+    if (fs.existsSync(pathOld)) /* Borrar la imagen anterior */ fs.unlinkSync(pathOld);
 
 }
 

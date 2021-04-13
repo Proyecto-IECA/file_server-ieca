@@ -29,7 +29,7 @@ router.put('/img/:tipo/:id', validJWT, putImg); // * Listo
 
 router.put('/cv/:id', validJWT, putPDF); // ! Probar : Sin proceso almacenado
 
-router.put('/file/:id', validJWT, putFile); // ? Probar
+router.put('/file/:id', validJWT, putFile); // * Listo
 
 router.get('/files/:tipo/:file', validJWT, getFiles); // ? Probar
 

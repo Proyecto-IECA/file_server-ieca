@@ -11,7 +11,7 @@ const { uploadFile } = require('../helpers/upload-file');
 // Methods
 const putFile = async (req, res = response) => {
 
-    // Catch 'id' de params (URL)
+    // Catch 'id' de la vacante de params (URL)
     const id = req.params.id;
 
     // Validar archivo
